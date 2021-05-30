@@ -16,5 +16,14 @@ btnSubmit.click(() => {
         state: UserState.val(),
         noOfBeds: BedNumbers.val(),
         hospitalName: HospitalName.val()
+    }, (err, data) => {
+        UserName.val("");
+        UserContact.val("");
+        UserCity.val("");
+        UserPostalCode.val("");
+        UserState.val("");
+        BedNumbers.val("");
+        HospitalName.val("");
+        confirm("Your form has been submitted")
     })
 })

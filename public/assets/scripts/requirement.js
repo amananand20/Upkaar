@@ -52,6 +52,7 @@ getLocation();
 btnSubmit.click(() => {
     $.get(`/api/vacancy/${inpPincode.val()}`, (datas) => {
         cardContainer.empty();
+        inpPincode.val("pincode");
         for(data of datas) {
             cardContainer.append(createCards(data));
         }
